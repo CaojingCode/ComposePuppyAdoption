@@ -106,11 +106,3 @@ fun DogDetailView(dogInfo: DogInfo) {
         }
     }
 }
-
-@Preview("Light Theme", widthDp = 360, heightDp = 640)
-@Composable
-fun DogDetailPreview() {
-    MyTheme {
-        DogDetailView(DogInfo())
-    }
-}
