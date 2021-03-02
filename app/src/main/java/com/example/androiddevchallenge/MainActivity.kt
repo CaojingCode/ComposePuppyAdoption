@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                MyApp(this,getDogs())
+                MyApp(this, getDogs())
             }
         }
     }
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 @Composable
-fun MyApp(activity: MainActivity,list:ArrayList<DogInfo>) {
+fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
     Surface(color = MaterialTheme.colors.background) {
         LazyColumn(content = {
             itemsIndexed(items = list) { index, item ->
