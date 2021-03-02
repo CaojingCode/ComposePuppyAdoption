@@ -4,14 +4,14 @@ import com.example.androiddevchallenge.R
 import java.io.Serializable
 
 data class DogInfo(
-    var name: String = "安琪拉baby", //名字
-    var alias: String = "泰迪",  //别名
-    var breed: String = "贵宾犬", //品种
+    var name: String = "安琪拉baby", /* 名字 */
+    var alias: String = "泰迪",  /* 别名 */
+    var breed: String = "贵宾犬", /* 品种 */
     var introduce: String = "最常见的是红色（也叫棕色）中小体型的贵宾犬 除此之外还有黑色、灰色、白色等颜色的贵宾犬 其体型也有茶杯体贵宾至巨型贵宾之分 此类犬是小型犬中智商最高者 性格活泼 且最大的优点就是不会像其他汪星人一样大量掉毛 但也正因为如此 它需要定期理毛修毛", //介绍
-    var imageId: Int=R.drawable.ic_launcher_background
-):Serializable
+    var imageId: Int = R.drawable.ic_launcher_background
+) : Serializable
 
-public var names = arrayOf("安琪拉baby", "小熊熊", "俊介", "小吉吉", "老爷爷", "巴格达", "小妲己", "柯南")
+var names = arrayOf("安琪拉baby", "小熊熊", "俊介", "小吉吉", "老爷爷", "巴格达", "小妲己", "柯南")
 var alias = arrayOf("泰迪", "比熊", "博美", "苹果头", "小老头，倔老头", "哈巴狗", "迷你杜宾", "名侦探")
 var breads = arrayOf("贵宾犬", "比熊犬", "博美犬", "吉娃娃", "雪纳瑞", "巴哥犬", "鹿犬", "柯基")
 var introduces = arrayOf(
@@ -24,7 +24,16 @@ var introduces = arrayOf(
     "有人称之为“迷你杜宾”常见颜色为黑红色（有人称之为“铁包金”）和红色 四肢修长 体型匀称 被毛短 随着年龄增长耳朵会渐渐立直 性格机警活泼",
     "英国女王最爱的犬 小短腿 性格友好温顺 聪明善解人意 充满活力（个人觉得这种犬 小短腿的基因特别强大）"
 )
-var imageIds= arrayOf(R.drawable.guibin,R.drawable.bixion,R.drawable.bomei,R.drawable.jiwawa,R.drawable.xuenarui,R.drawable.bage,R.drawable.luquan,R.drawable.keji)
+var imageIds = arrayOf(
+    R.drawable.guibin,
+    R.drawable.bixion,
+    R.drawable.bomei,
+    R.drawable.jiwawa,
+    R.drawable.xuenarui,
+    R.drawable.bage,
+    R.drawable.luquan,
+    R.drawable.keji
+)
 
 fun getDogs(): List<DogInfo> {
     var list = ArrayList<DogInfo>()

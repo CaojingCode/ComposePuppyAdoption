@@ -16,7 +16,6 @@ import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -43,30 +42,53 @@ class DogDetailActivity : AppCompatActivity() {
 @Composable
 fun DogDetailView(dogInfo: DogInfo) {
     Surface(color = MaterialTheme.colors.background) {
-            Column(
+        Column(
+            Modifier
+                .verticalScroll(ScrollState(0))
+        ) {
+            Image(
+                painterResource(id = dogInfo.imageId),
+                dogInfo.name,
                 Modifier
-                    .verticalScroll(ScrollState(0))) {
-                Image(
-                    painterResource(id = dogInfo.imageId),
-                    dogInfo.name,
-                    Modifier
-                        .fillMaxWidth()
-                        .height(300.dp),
-                    contentScale = ContentScale.Crop
-                )
-                Row(Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween) {
-                    Column {
-                        Text(text = dogInfo.name, fontSize = 28.sp,color = Color.Magenta,modifier = Modifier.padding(15.dp))
-                        Text(text = dogInfo.alias, fontSize = 22.sp, color = Color.Blue,modifier = Modifier.padding(bottom = 15.dp,start = 15.dp,end = 15.dp))
-                        Text(text = dogInfo.breed, fontSize = 22.sp, color = Color.Red,modifier = Modifier.padding(bottom = 15.dp,start = 15.dp,end = 15.dp))
-                    }
-                    Button({},Modifier.padding(top = 15.dp,end = 15.dp)) {
-                        Text(text = "领养小狗")
-                    }
+                    .fillMaxWidth()
+                    .height(300.dp),
+                contentScale = ContentScale.Crop
+            )
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column {
+                    Text(
+                        text = dogInfo.name,
+                        fontSize = 28.sp,
+                        color = Color.Magenta,
+                        modifier = Modifier.padding(15.dp)
+                    )
+                    Text(
+                        text = dogInfo.alias,
+                        fontSize = 22.sp,
+                        color = Color.Blue,
+                        modifier = Modifier.padding(bottom = 15.dp, start = 15.dp, end = 15.dp)
+                    )
+                    Text(
+                        text = dogInfo.breed,
+                        fontSize = 22.sp,
+                        color = Color.Red,
+                        modifier = Modifier.padding(bottom = 15.dp, start = 15.dp, end = 15.dp)
+                    )
                 }
-                Text(text = dogInfo.introduce, fontSize = 22.sp, color = Color.DarkGray,modifier = Modifier.padding(start = 15.dp,end = 15.dp))
+                Button({}, Modifier.padding(top = 15.dp, end = 15.dp)) {
+                    Text(text = "领养小狗")
+                }
             }
+            Text(
+                text = dogInfo.introduce,
+                fontSize = 22.sp,
+                color = Color.DarkGray,
+                modifier = Modifier.padding(start = 15.dp, end = 15.dp)
+            )
+        }
     }
 }
 
