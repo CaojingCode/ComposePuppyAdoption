@@ -51,9 +51,9 @@ var imageIds = arrayOf(
 )
 
 fun getDogs(): List<DogInfo> {
-    var list = ArrayList<DogInfo>()
+    val list = ArrayList<DogInfo>()
     for (i in names.indices) {
-        var dogInfo =
+        val dogInfo =
             DogInfo(names[i], alias[i], breads[i], introduces[i], imageIds[i])
         list.add(dogInfo)
     }
