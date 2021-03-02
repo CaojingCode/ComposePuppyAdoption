@@ -123,7 +123,6 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                             Text(text = item.alias, fontSize = 22.sp, color = Color.DarkGray)
                             Text(text = item.breed, fontSize = 22.sp, color = Color.DarkGray)
                         }
-
                     }
                     if (index < list.size - 1) {
                         Divider(startIndent = 130.dp)

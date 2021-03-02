@@ -50,7 +50,6 @@ class DogDetailActivity : AppCompatActivity() {
             MyTheme {
                 DogDetailView(dogInfo = dogInfo)
             }
-
         }
     }
 }
@@ -114,4 +113,5 @@ fun DogDetailPreview() {
     MyTheme {
         DogDetailView(DogInfo())
     }
+
 }
