@@ -120,7 +120,8 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                             Column(
                                 Modifier
                                     .padding(start = 20.dp)
-                                    .height(100.dp), Arrangement.SpaceBetween
+                                    .height(100.dp),
+                                Arrangement.SpaceBetween
                             ) {
                                 Text(
                                     text = item.name, fontSize = 28.sp

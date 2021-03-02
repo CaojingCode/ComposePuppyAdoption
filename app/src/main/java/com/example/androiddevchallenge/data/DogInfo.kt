@@ -21,8 +21,8 @@ import java.io.Serializable
 
 data class DogInfo(
     val name: String = "安琪拉baby", /* 名字 */
-    val alias: String = "泰迪",  /* 别名 */
+    val alias: String = "泰迪", /* 别名 */
     val breed: String = "贵宾犬", /* 品种 */
-    val introduce: String = "最常见的是红色（也叫棕色）中小体型的贵宾犬 除此之外还有黑色、灰色、白色等颜色的贵宾犬 其体型也有茶杯体贵宾至巨型贵宾之分 此类犬是小型犬中智商最高者 性格活泼 且最大的优点就是不会像其他汪星人一样大量掉毛 但也正因为如此 它需要定期理毛修毛", //介绍
+    val introduce: String = "最常见的是红色（也叫棕色）中小体型的贵宾犬 除此之外还有黑色、灰色、白色等颜色的贵宾犬 其体型也有茶杯体贵宾至巨型贵宾之分 此类犬是小型犬中智商最高者 性格活泼 且最大的优点就是不会像其他汪星人一样大量掉毛 但也正因为如此 它需要定期理毛修毛", /* 介绍 */
     @DrawableRes var imageId: Int = R.drawable.ic_launcher_background
 ) : Serializable
