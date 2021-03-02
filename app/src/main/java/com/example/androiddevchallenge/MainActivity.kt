@@ -96,49 +96,49 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
     Surface(color = MaterialTheme.colors.background) {
         LazyColumn(
             content = {
-            itemsIndexed(items = list) { index, item ->
-                Column(
-                    Modifier.clickable {
-                    /* 挑战到详情页面 */
-                    Intent(activity, DogDetailActivity::class.java).apply {
-                        putExtra("dogInfo", item)
-                        activity.startActivity(this)
-                    }
-                }
-                ) {
-                    Row(
-                        modifier = Modifier.padding(10.dp)
-                    ) {
-                        Image(
-                            painterResource(id = item.imageId),
-                            item.name,
-                            Modifier
-                                .size(100.dp)
-                                .clip(RoundedCornerShape(10.dp)),
-                            contentScale = ContentScale.Crop
-                        )
-                        Column(
-                            Modifier
-                                .padding(start = 20.dp)
-                                .height(100.dp), Arrangement.SpaceBetween
-                        ) {
-                            Text(
-                                text = item.name, fontSize = 28.sp
-                            )
-                            Text(
-                                text = item.alias, fontSize = 22.sp, color = Color.DarkGray
-                            )
-                            Text(
-                                text = item.breed, fontSize = 22.sp, color = Color.DarkGray
-                            )
+                itemsIndexed(items = list) { index, item ->
+                    Column(
+                        Modifier.clickable {
+                            /* 挑战到详情页面 */
+                            Intent(activity, DogDetailActivity::class.java).apply {
+                                putExtra("dogInfo", item)
+                                activity.startActivity(this)
+                            }
                         }
-                    }
-                    if (index < list.size - 1) {
-                        Divider(startIndent = 130.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(10.dp)
+                        ) {
+                            Image(
+                                painterResource(id = item.imageId),
+                                item.name,
+                                Modifier
+                                    .size(100.dp)
+                                    .clip(RoundedCornerShape(10.dp)),
+                                contentScale = ContentScale.Crop
+                            )
+                            Column(
+                                Modifier
+                                    .padding(start = 20.dp)
+                                    .height(100.dp), Arrangement.SpaceBetween
+                            ) {
+                                Text(
+                                    text = item.name, fontSize = 28.sp
+                                )
+                                Text(
+                                    text = item.alias, fontSize = 22.sp, color = Color.DarkGray
+                                )
+                                Text(
+                                    text = item.breed, fontSize = 22.sp, color = Color.DarkGray
+                                )
+                            }
+                        }
+                        if (index < list.size - 1) {
+                            Divider(startIndent = 130.dp)
+                        }
                     }
                 }
             }
-        }
         )
     }
 }
