@@ -50,6 +50,7 @@ class DogDetailActivity : AppCompatActivity() {
             MyTheme {
                 DogDetailView(dogInfo = dogInfo)
             }
+
         }
     }
 }

@@ -21,12 +21,12 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -89,15 +89,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
 }
 
 @Composable
 fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
     Surface(color = MaterialTheme.colors.background) {
-        LazyColumn(content = {
+        LazyColumn(
+            content = {
             itemsIndexed(items = list) { index, item ->
-                Column(Modifier.clickable {
+                Column(
+                    Modifier.clickable {
                     /* 挑战到详情页面 */
                     Intent(activity, DogDetailActivity::class.java).apply {
                         putExtra("dogInfo", item)
@@ -105,7 +106,6 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                     }
                 }) {
                     Row(modifier = Modifier.padding(10.dp)) {
-
                         Image(
                             painterResource(id = item.imageId),
                             item.name,
