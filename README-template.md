@@ -1,17 +1,20 @@
 # Put title of your app here
+领养小狗
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/CaojingCode/ComposePuppyAdoption/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
+模拟领养小狗app，由小狗列表和小狗详情组成。使用Compose构建代码。
 
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
+第一次写Compose程序，很有成就感，感觉Compose写代码很方便。
 
 
 ## :camera_flash: Screenshots
