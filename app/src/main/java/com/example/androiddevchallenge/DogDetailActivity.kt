@@ -15,7 +15,6 @@
  */
 package com.example.androiddevchallenge
 
-
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -42,7 +41,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.data.DogInfo
 import com.example.androiddevchallenge.ui.theme.MyTheme
-
 
 class DogDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
