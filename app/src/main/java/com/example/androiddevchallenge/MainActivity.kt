@@ -104,8 +104,10 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                         putExtra("dogInfo", item)
                         activity.startActivity(this)
                     }
-                }) {
-                    Row(modifier = Modifier.padding(10.dp)) {
+                }
+                ) {
+                    Row(
+                        modifier = Modifier.padding(10.dp)) {
                         Image(
                             painterResource(id = item.imageId),
                             item.name,
@@ -128,7 +130,6 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                         Divider(startIndent = 130.dp)
                     }
                 }
-
             }
         })
     }

@@ -113,5 +113,4 @@ fun DogDetailPreview() {
     MyTheme {
         DogDetailView(DogInfo())
     }
-
 }
