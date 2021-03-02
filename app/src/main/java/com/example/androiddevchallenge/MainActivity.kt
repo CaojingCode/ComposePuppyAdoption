@@ -107,7 +107,8 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                 }
                 ) {
                     Row(
-                        modifier = Modifier.padding(10.dp)) {
+                        modifier = Modifier.padding(10.dp)
+                    ) {
                         Image(
                             painterResource(id = item.imageId),
                             item.name,
@@ -121,9 +122,15 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                                 .padding(start = 20.dp)
                                 .height(100.dp), Arrangement.SpaceBetween
                         ) {
-                            Text(text = item.name, fontSize = 28.sp)
-                            Text(text = item.alias, fontSize = 22.sp, color = Color.DarkGray)
-                            Text(text = item.breed, fontSize = 22.sp, color = Color.DarkGray)
+                            Text(
+                                text = item.name, fontSize = 28.sp
+                            )
+                            Text(
+                                text = item.alias, fontSize = 22.sp, color = Color.DarkGray
+                            )
+                            Text(
+                                text = item.breed, fontSize = 22.sp, color = Color.DarkGray
+                            )
                         }
                     }
                     if (index < list.size - 1) {
@@ -131,6 +138,7 @@ fun MyApp(activity: MainActivity, list: ArrayList<DogInfo>) {
                     }
                 }
             }
-        })
+        }
+        )
     }
 }
