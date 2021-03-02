@@ -5,7 +5,12 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
@@ -51,7 +56,7 @@ fun DogDetailView(dogInfo: DogInfo) {
                 )
                 Row(Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween) {
-                    Column() {
+                    Column {
                         Text(text = dogInfo.name, fontSize = 28.sp,color = Color.Magenta,modifier = Modifier.padding(15.dp))
                         Text(text = dogInfo.alias, fontSize = 22.sp, color = Color.Blue,modifier = Modifier.padding(bottom = 15.dp,start = 15.dp,end = 15.dp))
                         Text(text = dogInfo.breed, fontSize = 22.sp, color = Color.Red,modifier = Modifier.padding(bottom = 15.dp,start = 15.dp,end = 15.dp))
